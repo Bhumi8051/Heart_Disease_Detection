@@ -5,48 +5,73 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: #ffffff;
+            transition: background-color 0.5s ease; /* Smooth transition effect */
         }
+
         .container {
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            padding: 20px;
-            width: 400px;
             text-align: center;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         h1 {
-            color: #333333;
+            font-size: 32px;
+            margin-bottom: 10px;
         }
+
         p {
             font-size: 18px;
-            color: #555555;
-            margin: 20px 0;
         }
-        a {
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #007bff;
+
+        .detected {
+            background-color: #ff4d4d; /* Red for disease detected */
+        }
+
+        .not-detected {
+            background-color: #4CAF50; /* Green for no disease */
+        }
+
+        button {
+            margin-top: 20px;
             padding: 10px 20px;
+            background-color: #ffffff;
+            border: none;
+            color: #333333;
             border-radius: 5px;
-            display: inline-block;
+            cursor: pointer;
+            font-size: 16px;
         }
-        a:hover {
-            background-color: #0056b3;
+
+        button:hover {
+            background-color: #f0f0f0;
         }
+        @media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
+
     </style>
 </head>
-<body>
+<body class="{{ 'detected' if result == 'Heart Disease Detected' else 'not-detected' }}">
     <div class="container">
-        <h1>Prediction Result</h1>
-        <p>{{ result }}</p>
-        <a href="/">Go Back</a>
+        <h1>{{ result }}</h1>
+        <p>Based on the input parameters, the prediction has been made.</p>
+        <button onclick="window.location.href='/'">Go Back</button>
     </div>
 </body>
 </html>
