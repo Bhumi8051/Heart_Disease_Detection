@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px 30px;
+            width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin: 8px 0 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" placeholder="Enter age in years" required>
+            
+            <label for="sex">Sex:</label>
+            <input type="number" name="sex" id="sex" placeholder="1 = Male, 0 = Female" required>
+            
+            <label for="cp">CP:</label>
+            <input type="number" name="cp" id="cp" placeholder="Chest pain type (0-3)" required>
+            
+            <label for="trestbps">Trestbps:</label>
+            <input type="number" name="trestbps" id="trestbps" placeholder="Resting blood pressure (mmHg)" required>
+            
+            <label for="chol">Chol:</label>
+            <input type="number" name="chol" id="chol" placeholder="Cholesterol level (mg/dL)" required>
+            
+            <label for="fbs">FBS:</label>
+            <input type="number" name="fbs" id="fbs" placeholder="Fasting blood sugar > 120 mg/dL (1 = True, 0 = False)" required>
+            
+            <label for="restecg">Restecg:</label>
+            <input type="number" name="restecg" id="restecg" placeholder="Resting ECG results (0-2)" required>
+            
+            <label for="thalach">Thalach:</label>
+            <input type="number" name="thalach" id="thalach" placeholder="Maximum heart rate achieved" required>
+            
+            <label for="exang">Exang:</label>
+            <input type="number" name="exang" id="exang" placeholder="Exercise-induced angina (1 = Yes, 0 = No)" required>
+            
+            <label for="oldpeak">Oldpeak:</label>
+            <input type="number" step="0.1" name="oldpeak" id="oldpeak" placeholder="ST depression induced by exercise" required>
+            
+            <label for="slope">Slope:</label>
+            <input type="number" name="slope" id="slope" placeholder="Slope of the peak exercise ST segment (0-2)" required>
+            
+            <label for="ca">CA:</label>
+            <input type="number" name="ca" id="ca" placeholder="Number of major vessels (0-3)" required>
+            
+            <label for="thal">Thal:</label>
+            <input type="number" name="thal" id="thal" placeholder="Thalassemia (0-3)" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
