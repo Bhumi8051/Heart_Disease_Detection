@@ -1,5 +1,3 @@
-Absolutely! Here’s a **refined and professional `README.md`** that follows the clean style of your last example but also includes **Flask web app** details:
-
 ---
 
 # ❤️ Heart Disease Prediction using Machine Learning and Flask
