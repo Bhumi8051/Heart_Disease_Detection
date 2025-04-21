@@ -107,8 +107,8 @@ heart-disease-predictor/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/heart-disease-predictor.git
-   cd heart-disease-predictor
+   git clone https://github.com/Bhumi8051/Heart_Disease_Detection.git
+   cd Heart_Disease_Detection
    ```
 
 2. Install required libraries:
